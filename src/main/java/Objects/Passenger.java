@@ -1,15 +1,22 @@
 package Objects;
 
-public class Passenger {
+import MethodClasses.BookFlight;
+
+import java.awt.print.Book;
+import java.util.Scanner;
+
+public class Passenger  {
+
 
     private String name;
+    private int id;
     private ContactInfo contactInfo;
-    private long passportNumber;
 
-    public Passenger(String name, ContactInfo contactInfo, long passportNumber) {
+
+    public Passenger(String name, int id, ContactInfo contactInfo) {
         this.name = name;
+        this.id = id;
         this.contactInfo = contactInfo;
-        this.passportNumber = passportNumber;
     }
 
     public String getName() {
@@ -20,6 +27,14 @@ public class Passenger {
         this.name = name;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public ContactInfo getContactInfo() {
         return contactInfo;
     }
@@ -28,11 +43,6 @@ public class Passenger {
         this.contactInfo = contactInfo;
     }
 
-    public long getPassportNumber() {
-        return passportNumber;
-    }
 
-    public void setPassportNumber(long passportNumber) {
-        this.passportNumber = passportNumber;
-    }
+
 }

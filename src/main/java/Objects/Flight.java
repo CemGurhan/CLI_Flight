@@ -1,12 +1,14 @@
 package Objects;
 
+import MethodClasses.BookFlight;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Flight {
 
     private String destination;
-    private int flightNumber;
+    private int id;
     private List<Passenger> passengers;
     private boolean isReturn;
     private int departureTime;
@@ -16,7 +18,7 @@ public class Flight {
     public Flight(String destination, int flightNumber, boolean isReturn, int departTime, String departDate) {
 
         this.destination = destination;
-        this.flightNumber = flightNumber;
+        this.id = flightNumber;
         this.isReturn = isReturn;
         this.departureTime = departTime;
         this.departureDate = departDate;
@@ -32,11 +34,11 @@ public class Flight {
     }
 
     public int getFlightNumber() {
-        return flightNumber;
+        return id;
     }
 
     public void setFlightNumber(int flightNumber) {
-        this.flightNumber = flightNumber;
+        this.id = flightNumber;
     }
 
 
@@ -75,7 +77,9 @@ public class Flight {
 
     @Override
     public String toString(){
-        return "Flight info: destination: " + this.destination + ", flight number: " + this.flightNumber +
+        return "Flight info: destination: " + this.destination + ", flight number: " + this.id +
                 ", departure date and time: " + this.departureDate + ", " + this.departureTime;
     }
+
+
 }
