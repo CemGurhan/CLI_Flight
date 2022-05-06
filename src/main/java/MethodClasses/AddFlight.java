@@ -5,7 +5,7 @@ import Objects.Flight;
 
 public abstract class AddFlight extends Flights {
 
-    public static void addFlight(Flight flight){
+    public static void addFlightNonMain(Flight flight){
         getFlights().add(flight);
     }
 

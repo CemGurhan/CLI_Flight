@@ -6,13 +6,11 @@ public class ContactInfo{
 
 
     private String emailAddress;
-    private int telephoneNumber;
-    private String address;
+    private Long telephoneNumber;
 
-    public ContactInfo(String emailAddress, int telephoneNumber, String address) {
+    public ContactInfo(String emailAddress, Long telephoneNumber) {
         this.emailAddress = emailAddress;
         this.telephoneNumber = telephoneNumber;
-        this.address = address;
     }
 
 }

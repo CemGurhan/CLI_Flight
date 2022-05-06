@@ -8,18 +8,18 @@ import java.util.List;
 public class Flight {
 
     private String destination;
-    private int id;
+    private int flightNumber;
     private List<Passenger> passengers;
-    private boolean isReturn;
+
     private int departureTime;
 
     private String departureDate;
 
-    public Flight(String destination, int flightNumber, boolean isReturn, int departTime, String departDate) {
+    public Flight(String destination, int flightNumber, int departTime, String departDate) {
 
         this.destination = destination;
-        this.id = flightNumber;
-        this.isReturn = isReturn;
+        this.flightNumber = flightNumber;
+
         this.departureTime = departTime;
         this.departureDate = departDate;
         passengers = new ArrayList<>();
@@ -34,11 +34,11 @@ public class Flight {
     }
 
     public int getFlightNumber() {
-        return id;
+        return flightNumber;
     }
 
     public void setFlightNumber(int flightNumber) {
-        this.id = flightNumber;
+        this.flightNumber = flightNumber;
     }
 
 
@@ -67,17 +67,11 @@ public class Flight {
         this.departureDate = departureDate;
     }
 
-    public boolean isReturn() {
-        return isReturn;
-    }
 
-    public void setReturn(boolean aReturn) {
-        isReturn = aReturn;
-    }
 
     @Override
     public String toString(){
-        return "Flight info: destination: " + this.destination + ", flight number: " + this.id +
+        return "Flight info: destination: " + this.destination + ", flight number: " + this.flightNumber +
                 ", departure date and time: " + this.departureDate + ", " + this.departureTime;
     }
 

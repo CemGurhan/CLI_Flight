@@ -10,6 +10,8 @@ public abstract class BookFlight extends Flights {
 
     public static void bookFlight(Passenger passenger, Flight flight){
 
+
+        BookFlightChecker.flightChecker(passenger, flight);
         flight.getPassengers().add(passenger);
     }
 

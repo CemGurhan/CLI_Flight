@@ -1,4 +1,6 @@
-package Objects;
+package DataBases;
+
+import Objects.Passenger;
 
 import java.util.HashMap;
 import java.util.Map;
